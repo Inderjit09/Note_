@@ -23,4 +23,3 @@ public class Subject {
     public void setSubject(String subject) {
         this.subject = subject;
     }
-}
