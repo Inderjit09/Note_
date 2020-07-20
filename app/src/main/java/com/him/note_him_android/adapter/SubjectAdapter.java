@@ -76,5 +76,4 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.ViewHold
             name = itemView.findViewById(R.id.name);
         }
     }
-
 }

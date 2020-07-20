@@ -65,10 +65,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
-    public List<Note> searchNote(String title,String subject) {
+    public List<Note> searchNote(String title, String subject) {
         List<Note> notes = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + Note.TABLE_NAME + " where "+Note.COLUMN_SUBJECT+" ='"+subject+"' and (" + Note.COLUMN_NOTE + " LIKE '%" + title + "%'" + " or " + Note.COLUMN_DESCRIPTION + " LIKE '%" + title + "%')", null);
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + Note.TABLE_NAME + " where " + Note.COLUMN_SUBJECT + " ='" + subject + "' and (" + Note.COLUMN_NOTE + " LIKE '%" + title + "%'" + " or " + Note.COLUMN_DESCRIPTION + " LIKE '%" + title + "%')", null);
         if (cursor != null) {
             if (cursor.moveToFirst()) {
                 do {
@@ -114,7 +114,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public List<Note> getAllNotes(String subject) {
         List<Note> notes = new ArrayList<>();
-        String selectQuery = "SELECT  * FROM " + Note.TABLE_NAME + " where "+Note.COLUMN_SUBJECT+" = '"+subject+"' ORDER BY " +
+        String selectQuery = "SELECT  * FROM " + Note.TABLE_NAME + " where " + Note.COLUMN_SUBJECT + " = '" + subject + "' ORDER BY " +
                 Note.COLUMN_TIMESTAMP + " DESC";
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -193,3 +193,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)});
         db.close();
     }
+}
