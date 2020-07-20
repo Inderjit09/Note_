@@ -401,7 +401,7 @@ public class AddNoteActivity extends AppCompatActivity {
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA);
         cursor.moveToFirst();
         return cursor.getString(column_index);
-
+    }
 
     private void requestPermissionCamera() {
         ActivityCompat.requestPermissions(AddNoteActivity.this, new
