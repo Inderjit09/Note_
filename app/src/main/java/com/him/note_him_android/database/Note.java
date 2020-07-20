@@ -126,3 +126,4 @@ public class Note {
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
+}
