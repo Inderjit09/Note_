@@ -75,4 +75,4 @@ public class ViewNote extends AppCompatActivity {
             mediaPlayer.stop();
         super.onStop();
     }
-
+}
