@@ -37,7 +37,8 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
         this.list = list;
         this.context = context;
     }
-    public void updateList(List<Note> list){
+
+    public void updateList(List<Note> list) {
         this.list = list;
         notifyDataSetChanged();
     }
@@ -60,7 +61,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
             e.printStackTrace();
         }
         holder.address.setText(list.get(position).getAddress());
-        holder.description.setText("Description :-"+list.get(position).getDescription());
+        holder.description.setText("Description :-" + list.get(position).getDescription());
         File file = new File(list.get(position).getImage());
         Uri uri = Uri.fromFile(file);
         holder.imageView.setImageURI(uri);
@@ -125,8 +126,8 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView name, subject, address,description;
-        ImageView imageView, play,edit;
+        TextView name, subject, address, description;
+        ImageView imageView, play, edit;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -139,4 +140,4 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
             edit = itemView.findViewById(R.id.edit);
         }
     }
-
+}
