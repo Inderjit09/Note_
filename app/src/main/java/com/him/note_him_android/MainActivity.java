@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView subjectRecycler;
     SubjectAdapter subjectAdapter;
     boolean updateSubject = false;
-    int id=0;
+    int id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        subjectAdapter = new SubjectAdapter(databaseHelper.getAllSubject(), this, updateSubject,id,databaseHelper);
+        subjectAdapter = new SubjectAdapter(databaseHelper.getAllSubject(), this, updateSubject, id, databaseHelper);
         subjectRecycler.setAdapter(subjectAdapter);
     }
 
@@ -110,4 +110,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+}
