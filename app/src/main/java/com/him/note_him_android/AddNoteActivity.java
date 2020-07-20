@@ -406,7 +406,7 @@ public class AddNoteActivity extends AppCompatActivity {
     private void requestPermissionCamera() {
         ActivityCompat.requestPermissions(AddNoteActivity.this, new
                 String[]{WRITE_EXTERNAL_STORAGE, CAMERA, READ_EXTERNAL_STORAGE}, RequestPermissionCodeCamera);
-
+    }
 
     private void requestPermissionLocation() {
         ActivityCompat.requestPermissions(AddNoteActivity.this, new
